@@ -14,9 +14,9 @@ export class LoginComponent implements OnInit {
   
   userDetails:any={
     1000:{acno:1000,username:"amal",password:123,balance:100000},
-    1001:{acno:1000,username:"bhim",password:123,balance:100000},
-    1002:{acno:1000,username:"ajay",password:123,balance:100000},
-    1003:{acno:1000,username:"hari",password:123,balance:100000}
+    1001:{acno:1001,username:"bhim",password:123,balance:100000},
+    1002:{acno:1002,username:"ajay",password:123,balance:100000},
+    1003:{acno:1003,username:"hari",password:123,balance:100000}
   }
 
 
@@ -26,9 +26,33 @@ export class LoginComponent implements OnInit {
   }
   
 
-  login(){
-    var acnum=this.accno
-    var pawrd=this.pass
+  // login(){
+  //   var acnum=this.accno
+  //   var pawrd=this.pass
+  //   let user=this.userDetails
+  //   if(acnum in user){
+  //     if(pawrd==user[acnum]['password']){
+  //       alert('login success')
+  //     }else{
+  //       alert('incorrect password')
+  //     }
+
+  //   }else{
+  //     alert('user not exist')
+  //   }
+    
+  // }
+
+
+
+  login(a:any,b:any){
+
+    console.log(a.value);
+    console.log(b.value);
+    
+    
+    var acnum=a.value
+    var pawrd=b.value
     let user=this.userDetails
     if(acnum in user){
       if(pawrd==user[acnum]['password']){
@@ -43,17 +67,8 @@ export class LoginComponent implements OnInit {
     
   }
 
-  acnoChange(event:any){
-    this.accno=event.target.value
-    console.log(this.accno);
-    
-    
-  }
-  passChange(event:any){
-    this.pass=event.target.value
-    console.log(this.pass);
-    
-    
-  }
+  
+
+
 
 }

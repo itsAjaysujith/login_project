@@ -3,9 +3,9 @@
 <div><h1>{{aim}}</h1></div>
 <div id="main">
     <form action="">
-        <input type="text" class="first" id="accu" (change)="acnoChange($event)" [placeholder]="acno"><br>
-        <input type="password" class="first" id="pass" (change)="passChange($event)" placeholder="password"><br>
-        <button type="button" id="butt" (click)="login()" >sign in</button><br><hr><br>
+        <input type="text" class="first" id="accu" #acno [placeholder]="acno"><br>
+        <input type="password" class="first" id="pass" #pass placeholder="password"><br>
+        <button type="button" id="butt" (click)="login(acno,pass)" >sign in</button><br><hr><br>
         <a id="last">Dont have account?</a>
         <button id="link" type="button" >create</button>
     </form>

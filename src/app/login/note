@@ -14,4 +14,4 @@ methods
 
 
 2)Two way binding        
-   2.1)
+   2.1)ngModel--using third party formsModule

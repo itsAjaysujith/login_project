@@ -10,12 +10,12 @@ export class DashboardComponent implements OnInit {
 
   acnum=''
   pas=''
-  amt=''
+
 
 
   acnum1=''
   pas1=''
-  withd=''
+
   userOf=''
 
   constructor(private ds:DataService) {

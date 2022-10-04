@@ -8,10 +8,10 @@ export class DataService {
   currentUser:any
 
   userDetails:any={
-    1000:{acno:1000,username:"amal",password:123,balance:100000},
-    1001:{acno:1001,username:"bhim",password:123,balance:100000},
-    1002:{acno:1002,username:"ajay",password:123,balance:100000},
-    1003:{acno:1003,username:"hari",password:123,balance:100000}
+    1000:{acno:1000,username:"amal",password:123},
+    1001:{acno:1001,username:"bhim",password:123},
+    1002:{acno:1002,username:"ajay",password:123},
+    1003:{acno:1003,username:"hari",password:123}
   }
 
   constructor() { }
@@ -23,7 +23,7 @@ export class DataService {
     if(acno in userDetails){
      return false
     }else{
-      userDetails[acno]={acno,username,password,balance:0}
+      userDetails[acno]={acno,username,password}
       console.log(userDetails);
     
       
